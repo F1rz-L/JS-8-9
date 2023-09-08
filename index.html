@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <div>
+        <h1 id="waktu">Waktu</h1>
+        <h1 id="zodiak">Zodiak</h1>
+        <button onclick=waktu()>
+            Waktu
+        </button>
+        <button onclick="halo()">
+            Click
+        </button>
+        
+        <br><br><br>
+
+        <input type="number" id="bulan" placeholder="Bulan">
+        <input type="number" id="tanggal" placeholder="Tanggal">
+        <button onclick="zodiak()">
+            Zodiak
+        </button>
+
+        <br><br><br>
+        
+        <h1 id="hasil">Hasil</h1>
+        <input type="number" id="bil1" placeholder="Bilangan Satu">
+        <input type="number" id="bil2" placeholder="Bilangan Dua">
+        <br>
+        <button onclick="kali()">
+            Perkalian
+        </button>
+        <button onclick="bagi()">
+            Bagi
+        </button>
+        <button onclick="jumlah()">
+            Jumlah
+        </button>
+        <button onclick="kurang()">
+            Kurang
+        </button>
+    </div>
+    <br><br><br><br>
+    <div>
+        <br><br><br><br>
+        <input type="text" id="inputnama">
+        <button onclick="nama()" id="nama">Nama Saya</button>
+    </div>
+    <script>
+        function halo(){
+            alert("Halo JavaScript");
+        }
+
+        function waktu(){
+            document.getElementById('waktu').innerHTML=Date();
+        }
+
+        function zodiak(){
+            let tanggal=document.getElementById('tanggal').value;
+            let bulan=document.getElementById('bulan').value;
+
+            let zodiak = "Yah"; 
+
+            {
+            if(bulan==1){
+                if(tanggal>0 && tanggal<=19){
+                zodiak = "Capricorn";
+                }
+                if(tanggal>=20 && tanggal <=31){
+                zodiak = "Aquarius";
+                }
+            }
+            if(bulan==2){
+                if(tanggal>0 && tanggal<=18){
+                zodiak = "Aquarius";
+                }
+                if(tanggal>=19 && tanggal <=31){
+                zodiak = "Pisces";
+                }
+            }
+
+            document.getElementById('zodiak').innerHTML=zodiak;
+            }   
+        }
+        
+        function kali(){
+            let a = document.getElementById('bil1').value;
+            let b = document.getElementById('bil2').value;
+            let hasil = a*b;
+            document.getElementById('hasil').innerHTML=hasil;
+        }
+
+        function bagi(){
+            let a = document.getElementById('bil1').value;
+            let b = document.getElementById('bil2').value;
+            let hasil = a/b;
+            document.getElementById('hasil').innerHTML=hasil;
+        }
+        
+        function jumlah(){
+            let a = document.getElementById('bil1').value;
+            let b = document.getElementById('bil2').value;
+            let hasil = parseInt(a)+parseInt(b);
+            document.getElementById('hasil').innerHTML=hasil;
+        }
+
+        function kurang(){
+            let a = document.getElementById('bil1').value;
+            let b = document.getElementById('bil2').value;
+            let hasil = a-b;
+            document.getElementById('hasil').innerHTML=hasil;
+        }
+
+        function nama(){
+            let namasaya = document.getElementById('inputnama').value;
+            document.getElementById('nama').innerHTML=namasaya;
+        }
+    </script>
+</body>
+</html>
