@@ -11,6 +11,9 @@ function waktu(){
     document.getElementById('waktu').innerHTML=Date();
 }
 
+let zodiac = document.getElementById('zodiak');
+zodiac.addEventListener("click",zodiak);
+
 function zodiak(){
     let tanggal=document.getElementById('tanggal').value;
     let bulan=document.getElementById('bulan').value;
@@ -39,35 +42,53 @@ function zodiak(){
     }   
 }
 
-function kali(){
-    let a = document.getElementById('bil1').value;
-    let b = document.getElementById('bil2').value;
-    let hasil = a*b;
-    document.getElementById('hasil').innerHTML=hasil;
+{
+    function kali(){
+        let a = document.getElementById('bil1').value;
+        let b = document.getElementById('bil2').value;
+        let hasil = a*b;
+        document.getElementById('hasil').innerHTML=hasil;
+    }
+    
+    function bagi(){
+        let a = document.getElementById('bil1').value;
+        let b = document.getElementById('bil2').value;
+        let hasil = a/b;
+        document.getElementById('hasil').innerHTML=hasil;
+    }
+    
+    function jumlah(){
+        let a = document.getElementById('bil1').value;
+        let b = document.getElementById('bil2').value;
+        let hasil = parseFloat(a)+parseInt(b);
+        document.getElementById('hasil').innerHTML=hasil;
+    }
+    
+    function kurang(){
+        let a = document.getElementById('bil1').value;
+        let b = document.getElementById('bil2').value;
+        let hasil = a-b;
+        document.getElementById('hasil').innerHTML=hasil;
+    }
+    
+    function nama(){
+        let namasaya = document.getElementById('inputnama').value;
+        document.getElementById('nama').innerHTML=namasaya;
+    }
 }
 
-function bagi(){
-    let a = document.getElementById('bil1').value;
-    let b = document.getElementById('bil2').value;
-    let hasil = a/b;
-    document.getElementById('hasil').innerHTML=hasil;
+let hari = document.getElementById('hari');
+hari.addEventListener("click",coba);
+
+let isi = document.getElementById('ketik');
+let tampil = document.getElementById('waktu')
+isi.onkeyup = function(){
+    tampil.innerHTML = isi.value;
 }
 
-function jumlah(){
-    let a = document.getElementById('bil1').value;
-    let b = document.getElementById('bil2').value;
-    let hasil = parseFloat(a)+parseInt(b);
-    document.getElementById('hasil').innerHTML=hasil;
+function coba(){
+    alert("coba");
 }
 
-function kurang(){
-    let a = document.getElementById('bil1').value;
-    let b = document.getElementById('bil2').value;
-    let hasil = a-b;
-    document.getElementById('hasil').innerHTML=hasil;
-}
-
-function nama(){
-    let namasaya = document.getElementById('inputnama').value;
-    document.getElementById('nama').innerHTML=namasaya;
-}
+// tes js oktober 
+// 
