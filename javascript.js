@@ -2,6 +2,11 @@ function halo(){
     alert("Halo JavaScript");
 }
 
+let btn = document.getElementById('jam')
+btn.onclick = function(){
+    document.getElementById('waktu').innerHTML=Date();
+}
+
 function waktu(){
     document.getElementById('waktu').innerHTML=Date();
 }
